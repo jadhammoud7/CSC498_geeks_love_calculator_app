@@ -4,16 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     EditText full_name;
+    int start=0;
     String[] languages = { "C", "Java","Python", "HTML","MYSQL", "C#" };
+    ImageView image;
+    final Random myrandom=new Random();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,34 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void name(View v){
         String s="";
         full_name.setText(s);
+    }
+    public void calculate(View v){
+        ImageView image=(ImageView)findViewById(R.id.image1);
+        Spinner mySpinner = (Spinner) findViewById(R.id.dropdownlist);
+        String text = mySpinner.getSelectedItem().toString();
+        if(text=="C"){
+            image.animate().alpha(1);
+            image.setImageResource(R.drawable.c);
+        }
+        if(text=="Java"){
+            image.setImageResource(R.drawable.java);
+        }
+        if(text=="Python"){
+            image.setImageResource(R.drawable.python);
+        }
+        if(text=="HTML"){
+            image.setImageResource(R.drawable.html);
+        }
+        if(text=="MYSQL"){
+            image.setImageResource(R.drawable.mysql);
+        }
+        if(text=="C#"){
+            image.setImageResource(R.drawable.csharp);
+        }
+
+
+        String s=String.valueOf(myrandom.nextInt(100))+"";
+        Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
     }
 
 
