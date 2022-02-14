@@ -9,7 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -32,38 +35,52 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spino.setAdapter(ad);
 
+
     }
     public void name(View v){
         String s="";
         full_name.setText(s);
     }
     public void calculate(View v){
-        ImageView image=(ImageView)findViewById(R.id.image1);
-        Spinner mySpinner = (Spinner) findViewById(R.id.dropdownlist);
-        String text = mySpinner.getSelectedItem().toString();
-        if(text=="C"){
-            image.animate().alpha(1);
-            image.setImageResource(R.drawable.c);
-        }
-        if(text=="Java"){
-            image.setImageResource(R.drawable.java);
-        }
-        if(text=="Python"){
-            image.setImageResource(R.drawable.python);
-        }
-        if(text=="HTML"){
-            image.setImageResource(R.drawable.html);
-        }
-        if(text=="MYSQL"){
-            image.setImageResource(R.drawable.mysql);
-        }
-        if(text=="C#"){
-            image.setImageResource(R.drawable.csharp);
-        }
 
+        //if the name is empty ->error
 
-        String s=String.valueOf(myrandom.nextInt(100))+"";
-        Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+        String fullname =full_name.getText().toString();
+        if(fullname.equals("") || fullname.equals("Enter Full Name")){
+            Toast.makeText(getApplicationContext(), "Please enter a valid name", Toast.LENGTH_SHORT).show();
+        }else{
+            ImageView image=(ImageView)findViewById(R.id.image1);
+            Spinner mySpinner = (Spinner) findViewById(R.id.dropdownlist);
+            String text = mySpinner.getSelectedItem().toString();
+            if(text=="C"){
+                image.animate().alpha(1);
+                image.setImageResource(R.drawable.c);
+            }
+            if(text=="Java"){
+                image.animate().alpha(1);
+                image.setImageResource(R.drawable.java);
+            }
+            if(text=="Python"){
+                image.animate().alpha(1);
+                image.setImageResource(R.drawable.python);
+            }
+            if(text=="HTML"){
+                image.animate().alpha(1);
+                image.setImageResource(R.drawable.html);
+            }
+            if(text=="MYSQL"){
+                image.animate().alpha(1);
+                image.setImageResource(R.drawable.mysql);
+            }
+            if(text=="C#"){
+                image.animate().alpha(1);
+                image.setImageResource(R.drawable.csharp);
+            }
+
+            TextView percentage=(TextView)findViewById(R.id.percentage);
+            String s=String.valueOf(myrandom.nextInt(100))+"";
+            percentage.setText(s);
+        }
     }
 
 

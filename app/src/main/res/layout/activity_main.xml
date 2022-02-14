@@ -7,13 +7,12 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/wallpaper"
         android:layout_width="413dp"
         android:layout_height="733dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hearts" />
@@ -70,8 +69,8 @@
         android:id="@+id/image1"
         android:layout_width="109dp"
         android:layout_height="103dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
         android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,5 +89,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="87dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="52dp"
+        android:textAlignment="center"
+        android:textColor="#F3ECEC"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/calculate"
+        app:layout_constraintEnd_toStartOf="@+id/image1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdownlist" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="297dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="Check the Percentage of love between you and chosen language"
+        android:textAlignment="center"
+        android:textColor="#EDE3E3"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/full_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wallpaper" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
