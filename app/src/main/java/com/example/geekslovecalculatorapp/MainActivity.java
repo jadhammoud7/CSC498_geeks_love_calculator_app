@@ -12,11 +12,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+
+    TextView name_row1;
+    TextView percentage_row1;
+    TextView name_row2;
+    TextView percentage_row2;
+    TextView name_row3;
+    TextView percentage_row3;
+    TextView name_row4;
+    TextView percentage_row4;
+
     EditText full_name;
     int start=0;
     String[] languages = { "C", "Java","Python", "HTML","MYSQL", "C#" };
@@ -39,6 +47,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         image.setX(-1500);
 
 
+        name_row1= (TextView) findViewById(R.id.name_row1);
+        percentage_row1=(TextView)findViewById(R.id.percentage_row1);
+        name_row2= (TextView) findViewById(R.id.name_row2);
+        percentage_row2=(TextView)findViewById(R.id.percentage_row2);
+        name_row3= (TextView) findViewById(R.id.name_row3);
+        percentage_row3=(TextView)findViewById(R.id.percentage_row3);
+        name_row4= (TextView) findViewById(R.id.name_row4);
+        percentage_row4=(TextView)findViewById(R.id.percentage_row4);
 
     }
     public void name(View v){
@@ -90,7 +106,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             TextView percentage=(TextView)findViewById(R.id.percentage);
             String s=String.valueOf(myrandom.nextInt(100))+"";
             percentage.setText(s);
+
+            //puttin them in a table
+            if( name_row1.getText().toString().equals("") &&  percentage_row1.getText().toString().equals("")){
+                name_row1.setText(fullname);
+                percentage_row1.setText(s);
+            }else if( name_row2.getText().toString().equals("") &&  percentage_row2.getText().toString().equals("")){
+                name_row2.setText(fullname);
+                percentage_row2.setText(s);
+            }else if( name_row3.getText().toString().equals("") &&  percentage_row3.getText().toString().equals("")){
+                name_row3.setText(fullname);
+                percentage_row3.setText(s);
+            }else if( name_row4.getText().toString().equals("") &&  percentage_row4.getText().toString().equals("")){
+                name_row4.setText(fullname);
+                percentage_row4.setText(s);
+            }
+
+
+
         }
+
     }
 
 
