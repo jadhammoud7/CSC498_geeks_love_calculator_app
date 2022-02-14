@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spino.setAdapter(ad);
 
+        image=(ImageView)findViewById(R.id.image1);
+        image.setX(-1500);
+
+
 
     }
     public void name(View v){
@@ -49,31 +53,37 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(fullname.equals("") || fullname.equals("Enter Full Name")){
             Toast.makeText(getApplicationContext(), "Please enter a valid name", Toast.LENGTH_SHORT).show();
         }else{
-            ImageView image=(ImageView)findViewById(R.id.image1);
+            image.setX(-1500);
             Spinner mySpinner = (Spinner) findViewById(R.id.dropdownlist);
             String text = mySpinner.getSelectedItem().toString();
             if(text=="C"){
                 image.animate().alpha(1);
+                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
                 image.setImageResource(R.drawable.c);
             }
             if(text=="Java"){
                 image.animate().alpha(1);
+                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
                 image.setImageResource(R.drawable.java);
             }
             if(text=="Python"){
                 image.animate().alpha(1);
+                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
                 image.setImageResource(R.drawable.python);
             }
             if(text=="HTML"){
                 image.animate().alpha(1);
+                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
                 image.setImageResource(R.drawable.html);
             }
             if(text=="MYSQL"){
                 image.animate().alpha(1);
+                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
                 image.setImageResource(R.drawable.mysql);
             }
             if(text=="C#"){
                 image.animate().alpha(1);
+                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
                 image.setImageResource(R.drawable.csharp);
             }
 
