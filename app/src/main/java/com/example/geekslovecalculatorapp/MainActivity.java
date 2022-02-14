@@ -58,32 +58,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             String text = mySpinner.getSelectedItem().toString();
             if(text=="C"){
                 image.animate().alpha(1);
-                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
+                image.animate().translationXBy(2100);
                 image.setImageResource(R.drawable.c);
             }
             if(text=="Java"){
                 image.animate().alpha(1);
-                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
+                image.animate().translationXBy(2100);
                 image.setImageResource(R.drawable.java);
             }
             if(text=="Python"){
                 image.animate().alpha(1);
-                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
+                image.animate().translationXBy(2100);
                 image.setImageResource(R.drawable.python);
             }
             if(text=="HTML"){
                 image.animate().alpha(1);
-                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
+                image.animate().translationXBy(2100);
                 image.setImageResource(R.drawable.html);
             }
             if(text=="MYSQL"){
                 image.animate().alpha(1);
-                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
+                image.animate().translationXBy(2100);
                 image.setImageResource(R.drawable.mysql);
             }
             if(text=="C#"){
                 image.animate().alpha(1);
-                image.animate().translationXBy(2100).rotation(3600).setDuration(600);
+                image.animate().translationXBy(2100);
                 image.setImageResource(R.drawable.csharp);
             }
 
